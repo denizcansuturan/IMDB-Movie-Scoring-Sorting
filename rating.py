@@ -29,7 +29,7 @@ pd.set_option('display.float_format', lambda x: '%.5f' % x)
 # Percentage of Scores: 75, 20, 4, 1, <1
 # Approximate Numerical Equivalents: 3458, 922, 184, 46, 6
 
-df = pd.read_csv("D:/MIUUL/MEASUREMENT PROBLEMS/measurement_problems/rating/course_reviews.csv")
+df = pd.read_csv("course_reviews.csv")
 df.head()
 df.shape
 
