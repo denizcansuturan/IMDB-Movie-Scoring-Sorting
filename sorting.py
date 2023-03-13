@@ -15,7 +15,7 @@ pd.set_option('display.max_rows', None)
 pd.set_option('display.expand_frame_repr', False)
 pd.set_option('display.float_format', lambda x: '%.5f' % x)
 
-df = pd.read_csv("datasets/product_sorting.csv")
+df = pd.read_csv("product_sorting.csv")
 print(df.shape)
 df.head()
 
@@ -151,7 +151,7 @@ pd.set_option('display.max_columns', None)
 pd.set_option('display.expand_frame_repr', False)
 pd.set_option('display.float_format', lambda x: '%.5f' % x)
 
-df = pd.read_csv("datasets/movies_metadata.csv",
+df = pd.read_csv("movies_metadata.csv",
                  low_memory=False)  # DtypeWarning kapamak icin
 
 df = df[["title", "vote_average", "vote_count"]]  # sub dataframe
@@ -196,50 +196,6 @@ df.sort_values("average_count_score", ascending=False).head()
 # v = vote count
 # M = minimum votes required to be listed in the Top 250
 # C = the mean vote across the whole report (currently 7.0)
-
-# Film 1:
-# r = 8
-# M = 500
-# v = 1000
-
-# (1000 / (1000+500))*8 = 5.33
-
-
-# Film 2:
-# r = 8
-# M = 500
-# v = 3000
-
-# (3000 / (3000+500))*8 = 6.85
-
-# (1000 / (1000+500))*9.5 = 6.33
-
-# Film 1:
-# r = 8
-# M = 500
-# v = 1000
-
-# Birinci bölüm:
-# (1000 / (1000+500))*8 = 5.33
-
-# İkinci bölüm:
-# 500/(1000+500) * 7 = 2.33
-
-# Toplam = 5.33 + 2.33 = 7.66
-
-
-# Film 2:
-# r = 8
-# M = 500
-# v = 3000
-
-# Birinci bölüm:
-# (3000 / (3000+500))*8 = 6.85
-
-# İkinci bölüm:
-# 500/(3000+500) * 7 = 1
-
-# Toplam = 7.85
 
 M = 2500
 C = df['vote_average'].mean()
