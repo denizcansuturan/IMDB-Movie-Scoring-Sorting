@@ -15,3 +15,4 @@
   - Average Rating
   - Wilson Lower Bound Score
   
+[Medium Blog](https://medium.com/@denizcansuturan/rating-product-sorting-reviews-in-amazon-and-imdb-d7b53ace10a6)
